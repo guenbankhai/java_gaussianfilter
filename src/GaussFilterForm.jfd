@@ -1,0 +1,62 @@
+JFDML JFormDesigner: "9.0.0.0.352" Java: "21.0.4" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {comp pnKernel:::::x, comp pnImage::t:::x, comp lblCredit::t:::x}, space :::p}}"
+			"$verticalGroup": "par l {seq l {space :::p, comp pnKernel:::p::p, space :::p, comp pnImage:::p::p, space :::p, comp lblCredit:::p::p, space ::5:x}}"
+		} ) {
+			name: "this"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space :p::p, par l {comp lblStandardDeviation::l:p::p, comp lbKernel::l:p:92:p}, space ::27:x, par t:::p {comp spnKernel::::145:x, comp spnStandardDeviation:::::x}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, par b {comp lbKernel::b:p::p, comp spnKernel::b:p::p}, space s:::p, par b {comp lblStandardDeviation::b:p::p, comp spnStandardDeviation::b:p::p}, space :::p}}"
+			} ) {
+				name: "pnKernel"
+				"border": new javax.swing.border.TitledBorder( "Bộ lọc Gauss" )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lbKernel"
+					"text": "Kích cỡ:"
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spnKernel"
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "lblStandardDeviation"
+					"text": "Độ lệch chuẩn:"
+				} )
+				add( new FormComponent( "javax.swing.JSpinner" ) {
+					name: "spnStandardDeviation"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq {space ::78:x, par l:::p {comp btnImage::::0:x, comp btnResult::::120:x}, space ::78:x}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp btnImage:::p::p, space u:::p, comp btnResult:::p::p, space :::x}}"
+			} ) {
+				name: "pnImage"
+				"border": new javax.swing.border.TitledBorder( "Ảnh" )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnImage"
+					"text": "Chọn ảnh gốc"
+					"focusPainted": false
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btnImageMouseClicked", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "btnResult"
+					"text": "Xuất ảnh"
+					"focusPainted": false
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "btnResultMouseClicked", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "lblCredit"
+				"text": "Make By GuenBanKhai"
+				"horizontalAlignment": 0
+				"font": new java.awt.Font( "Inter", 0, 10 )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 0 )
+			"size": new java.awt.Dimension( 300, 305 )
+		} )
+	}
+}
